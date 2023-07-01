@@ -1,0 +1,8 @@
+from django.contrib import admin
+from django.urls import path
+from events import views
+
+
+urlpatterns = [
+    path('create_event/', views.create_event,name="create_event"),
+]
