@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# EventManagement
-=======
-# EventManagement
->>>>>>> master
+
