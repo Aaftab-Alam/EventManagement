@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import EventCreationForm
 from .models import Event
+from users.is_loggedin import login_required
+from django.http import HttpResponse
 
-# Create your views here.
 
-
+@login_required
 def create_event(request):
     if request.method == 'POST':
         form = EventCreationForm(request.POST)
@@ -21,3 +22,8 @@ def create_event(request):
     else:
         form = EventCreationForm()
     return render(request, 'create_event.html', {'form': form})
+
+
+def display_events(request):
+    events_list = Event.objects.all()
+    return render(request, 'display_events.html', {'events_list': events_list})
