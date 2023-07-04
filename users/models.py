@@ -24,13 +24,13 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 
 
 class Users(models.Model):
-    id = models.AutoField(primary_key=True)
+    _id = models.ObjectIdField(primary_key=True)
     email = models.EmailField(max_length=100)
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=100)
 
-    # def __str__(self):
-    #     return self.username
+    def __str__(self):
+        return str(self._id)
 
     class Meta:
         db_table = 'Users'

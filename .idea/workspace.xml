@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9806f20-5d26-4796-8710-4a8773b9a0ee" name="Changes" comment="" />
+    <list default="true" id="f9806f20-5d26-4796-8710-4a8773b9a0ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tickets/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventManagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventManagement/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventManagement/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/templates/display_events.html" beforeDir="false" afterPath="$PROJECT_DIR$/events/templates/display_events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -45,5 +56,16 @@
       <updated>1688101046885</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -9,10 +9,6 @@ def register(request):
     request.session.flush()
     if request.method == 'POST':
         print(request.session.is_empty())
-        session_data = request.session  # Access the session object
-        all_fields = session_data.items()  # Retrieve all session fields as key-value pairs
-        for key, value in all_fields:
-            print(f"Field: {key}, Value: {value}")
         form = RegistrationForm(request.POST)
         if form.is_valid():
             user = Users(
@@ -22,6 +18,7 @@ def register(request):
 
             )
             user.save()
+            request.session['id']=str(user._id)
             request.session['email'] = user.email
             request.session['username'] = user.username
 
@@ -38,16 +35,17 @@ def login_view(request):
     print(request.session.is_empty())
     if request.method == 'POST':
         form = LoginForm(request.POST)
-        print(form)
+        # print(form)
         if form.is_valid():
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             user = Users.objects.filter(email=email).first()
             if user is not None and user.password==password:
+                request.session['id']=str(user._id)
+                print(request.session.get('id'))
                 request.session['email'] = user.email
                 request.session['username'] = user.username
                 return redirect('display_events')
-                # return HttpResponse("logged in")
             else:
                 error_message = 'Invalid username or password'
                 print(error_message)

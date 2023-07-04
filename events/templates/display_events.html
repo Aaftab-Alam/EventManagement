@@ -15,6 +15,7 @@
         Venue: {{ event.venue }}<br>
         Description: {{ event.description }}
     </li>
+    <button><a href="../tickets/bookingId-{{event.id}}">Book Now</a></button>
     {% endfor %}
 
     <button><a href="{% url 'create_event' %}">Create Event</a> </button>

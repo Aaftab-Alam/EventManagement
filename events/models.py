@@ -1,6 +1,8 @@
 from djongo import models
 
 class Event(models.Model):
+    _id = models.ObjectIdField(primary_key=True)
+    createdBy=models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     date = models.DateField()
     location = models.CharField(max_length=100)

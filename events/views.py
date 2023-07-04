@@ -11,6 +11,7 @@ def create_event(request):
         form = EventCreationForm(request.POST)
         if form.is_valid():
             event = Event(
+                createdBy=request.session.get('id'),
                 name=form.cleaned_data['name'],
                 date=form.cleaned_data['date'],
                 location=form.cleaned_data['location'],
@@ -26,4 +27,12 @@ def create_event(request):
 
 def display_events(request):
     events_list = Event.objects.all()
+    for event in events_list:
+        event.id=str(event._id)
     return render(request, 'display_events.html', {'events_list': events_list})
+
+def my_events(request):
+    myEventsList=Event.objects.filter(createdBy=request.session['id'])
+    print(myEventsList)
+
+    return HttpResponse("printed")
